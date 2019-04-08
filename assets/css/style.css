@@ -1,0 +1,72 @@
+body {
+    background-image: url("../images/Alex_Grey-Jewel_Being.jpg");
+  }
+
+.container{
+  background: white;
+  height: 92px;
+  max-width: 100%;
+}
+
+.card_1 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background: #4aaaa5;
+    width: 255px;
+    height: 96%;
+    margin-left: 95px;
+}
+
+.nav {
+  height: 92px;
+  line-height: 95px;
+  font-size: 20px;
+  font-family: initial;
+}
+
+.nav-link {
+  padding: 3px;
+}
+
+a {
+  color: #777777;
+}
+
+.row_1 {
+  padding: 25px;
+}
+
+.card {
+left: 25px;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+font-size: 18px;
+color: #777777;
+}
+
+.card-header {
+  color: #4aaaa5;
+  background: #f2f2f2;
+  border-bottom: 0px;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+  background: #666666;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #777777;
+    border-top: solid 5px #4aaaa5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+

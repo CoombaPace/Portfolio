@@ -1,0 +1,97 @@
+body {
+    background-image: url("../images/Alex_Grey-Jewel_Being.jpg");
+  }
+
+.container{
+  background: white;
+  height: 92px;
+  max-width: 100%;
+}
+
+.card_1 {
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 24px;
+    /* padding: 15px; */
+    color: white;
+    background: #4aaaa5;
+    width: 255px;
+    height: 96%;
+    margin-left: 95px;
+}
+
+.nav {
+  height: 73px;
+  line-height: 95px;
+  font-size: 20px;
+  font-family: initial;
+}
+
+.nav-link {
+  padding: 3px;
+}
+
+a {
+  color: #777777;
+}
+
+.row_1 {
+  padding: 25px;
+}
+
+.card {
+left: 25px;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+font-size: 18px;
+color: #777777;
+}
+
+.card-header {
+  color: #4aaaa5;
+  background: white;
+  border-bottom: 0px;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    color: #4aaaa5;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+  background: #666666;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #777777;
+    border-top: solid 5px #4aaaa5;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Contact Form Styling: */
+
+.h1-responsive {
+  color: #4aaaa5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 11px;
+  margin-top: 11px;
+
+}
+
+.no-gutters {
+  margin-right: 42px;
+  margin-left: 42px;
+  width: 183%;
+}
+
+.btn-primary {
+  background-color: #4aaaa5;
+  border-color: #4aaaa5;
+}
+

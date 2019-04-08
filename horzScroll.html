@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+:root {
+  --gutter: 20px;
+}
+
+.app {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+  
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+
+/* Demo styles */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #456173;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.app {
+  width: 960px;
+  height: 667px;
+  background: #DBD0BC;
+  overflow-y: scroll;
+}
+
+a:hover { text-decoration: underline; 
+        }
+
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.hs { 
+    list-style: none; 
+    text-align: center;
+    }
+
+  .hs li { 
+    position: relative;
+    margin-right: 7px;
+    margin-bottom: 14px;
+    margin-top: 15px;
+    font-size: 20px;
+    }
+  img 
+  {
+    width: 314px;
+    height: 198px;
+  }
+  .hs li img { 
+    float: left;
+    cursor: pointer;
+    opacity: 0.6;
+    
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  .hs li:hover img { 
+    opacity: 1.0
+  }
+  
+  .hs li > .meta {
+    line-height: 1.7; 
+    float: left;
+    overflow: hidden;
+    position: initial;
+    z-index: 9999;
+    left: 125px;
+    height: 85px;
+    width: 0;
+    font-family: ;
+    font-size: .9em;
+    background: #fff;
+    
+    -webkit-box-shadow: 1px 0px 4px #8f8e88;
+    -moz-box-shadow: 1px 0px 4px #8f8e88;
+    -o-box-shadow: 1px 0px 4px #8f8e88;
+    box-shadow: 1px 0px 4px #8f8e88;
+  
+    
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    
+    -webkit-transition: width 0.3s linear;
+    -moz-transition: width 0.3s linear;
+    -ms-transition: width 0.3s linear;
+    -o-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+  }
+  
+  .hs li:hover > .meta {
+    width: 115px;
+    padding: 3px 5px;
+  }
+  
+  
+  .hs li .meta h4 { font-weight: bold; margin-bottom: 11px; font-size: 20px; padding-top: 8px; color: #363636; }
+  .hs li .meta span { display: block; margin-bottom: 5px; }
+  
+</style>
+
+<body>
+    <div class="app">
+        <h1>Mattia</h1>
+        <h3>(muh tee yuh)</h3>
+        
+        <ul class="hs">
+            <li class="item">Barcode Scanning Inventory Tracker
+                <img src="./assets/images/scanner.jpg">
+                  <div class="meta">
+                    <span><a href="https://github.com/e-scott/inventory" target="_blank">Next Milestone: Integrate with QuickBooks.</a></span>
+                  </div>
+              </li>
+          <li class="item">Voltron Trivia
+            <img src="./assets/images/voltron_screen.png">
+              <div class="meta">
+                <span><a href="" target="_blank">Supernerd Edition!</a></span>
+              </div>
+          </li>
+          <li class="item">Dragon Prince Battle Arena
+            <img src="./assets/images/battlearena.jpg">
+              <div class="meta">
+                <span><a href="https://coombapace.github.io/DragonPrinceBattleArena/" target="_blank">Now with Doomsday Countdown!</a></span>
+              </div>
+          </li>
+          <li class="item">Giphy Machine
+            <img src="./assets/images/giphymachine.jpg">
+              <div class="meta">
+                <span><a href="" target="_blank">Create Gif Buttons</a></span>
+              </div>
+          </li>
+          <li class="item">Beer Guessing Game
+            <img src="./assets/images/guessing.jpg">
+              <div class="meta">
+                <span><a href="" target="_blank">Are you beer nerd enough?</a></span>
+              </div>
+          </li>
+          <li class="item">test
+            <img src="./assets/images/chicagodawg copy.jpg">
+              <div class="meta">
+                Name
+                <span><a href="" target="_blank">Link</a></span>
+              </div>
+          </li>
+        </ul>
+        
+        <div class="container">
+          <div class="bottom">
+            <h5>atl., ga</h5>
+            <h5>muhteeyuh@gmail.com</h5>
+          </div>
+          <!-- <div class="item">
+            <h5>muhteeyuh@gmail.com</h5>
+          </div> -->
+        </div>
+      </div>
+</body>
+</html>
