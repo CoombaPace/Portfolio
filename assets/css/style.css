@@ -1,72 +1,252 @@
+
+:root {
+  --gutter: 20px;
+}
+
+.app {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+  overflow: hidden
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+  overflow-x: scroll;
+  /* overflow: hidden; */
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+/* Demo styles */
+
+html,
 body {
-    background-image: url("../images/Alex_Grey-Jewel_Being.jpg");
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #C2C8D3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+font-size: 60px;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+  width: 1035px;
+  float: right;
+}
+
+.bottom {
+  height: 40px;
+  font-size: 21px;
+}
+.container {
+  height: auto;
+}
+.foot {
+  position: relative;
+  display: inline-block;
+  left: 82px;
+  width: 570px;
+}
+
+.sub {
+  position: relative;
+  display: inline-block;
+  left: 66px;
+  width: 200px;
+}
+
+.app {
+  width: 960px;
+  height: 575px;
+  background: #C2C8D3;
+  overflow-y: scroll;
+}
+
+.across {
+  width: 1100px;
+  height: 110px;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000
+}
+a:hover { 
+  color: indigo;
+  text-decoration: none; 
+        }
+a:active {
+  color: white;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 20px;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #999;
+  border-radius: 8px;
+}
+
+.hs { 
+  list-style: none; 
+  text-align: center;
   }
 
-.container{
-  background: white;
-  height: 92px;
-  max-width: 100%;
-}
-
-.card_1 {
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-    text-align: center;
-    font-size: 24px;
-    color: white;
-    background: #4aaaa5;
-    width: 255px;
-    height: 96%;
-    margin-left: 95px;
-}
-
-.nav {
-  height: 92px;
-  line-height: 95px;
+.hs li { 
+  position: relative;
+  margin-right: 7px;
+  margin-bottom: 14px;
+  margin-top: 15px;
   font-size: 20px;
-  font-family: initial;
+  }
+
+img {
+    width: 314px;
+    height: 198px;
+    margin-top: 15px;
+  }
+
+.hs li img { 
+    float: left;
+    cursor: pointer;
+    opacity: 0.5;
+    
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+.hs li:hover img { 
+    opacity: 1.0
+  }
+  
+.hs li > .meta {
+    line-height: 1.7; 
+    float: left;
+    overflow: hidden;
+    position: initial;
+    z-index: 9999;
+    left: 125px;
+    height: 85px;
+    width: 0;
+    font-family: ;
+    font-size: .9em;
+    background: #fff;
+    
+    -webkit-box-shadow: 1px 0px 4px #8f8e88;
+    -moz-box-shadow: 1px 0px 4px #8f8e88;
+    -o-box-shadow: 1px 0px 4px #8f8e88;
+    box-shadow: 1px 0px 4px #8f8e88;
+  
+    
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    
+    
+    -webkit-transition: width 0.3s linear;
+    -moz-transition: width 0.3s linear;
+    -ms-transition: width 0.3s linear;
+    -o-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+  }
+  
+  .hs li:hover > .meta {
+    width: 115px;
+    padding: 3px 5px;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
+  
+  
+  .hs li .meta h4 { font-weight: bold; margin-bottom: 11px; font-size: 20px; padding-top: 8px; color: #363636; }
+  .hs li .meta span { display: block; margin-bottom: 5px; }
 
-.nav-link {
-  padding: 3px;
+/* Screen Resize to 768. */
+@media screen and (min-width: 641px) and (max-width: 768px) {
+
+
+  .app {
+    width: 90%;
+    height: 70%;
+    background: #E0DBE6;
+    overflow-y: scroll;
+  }
+
+  img 
+  {
+    width: 70%;
+    height: 70%;
+  }
+
+  .hs {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: repeat(6, calc(80% - var(--gutter) * 2));
+    grid-template-rows: minmax(150px, 1fr);
+    
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+  }
 }
-
-a {
-  color: #777777;
-}
-
-.row_1 {
-  padding: 25px;
-}
-
-.card {
-left: 25px;
-border-radius: 5px;
-background-color: #f2f2f2;
-padding: 20px;
-font-size: 18px;
-color: #777777;
-}
-
-.card-header {
-  color: #4aaaa5;
-  background: #f2f2f2;
-  border-bottom: 0px;
-  font-size: 24px;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-.footer {
-  background: #666666;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    font-size: 15px;
-    color: #777777;
-    border-top: solid 5px #4aaaa5;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-
-
