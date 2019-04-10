@@ -90,7 +90,7 @@ h3 {
 .app {
   width: 960px;
   height: 575px;
-  background: #C2C8D3;
+  background: #E0DBE6;
   overflow-y: scroll;
 }
 
@@ -153,8 +153,8 @@ span {
   }
 
 img {
-    width: 314px;
-    height: 198px;
+    width: 95%;
+    height: 82%;
     margin-top: 15px;
   }
 
@@ -224,18 +224,24 @@ img {
 /* Screen Resize to 768. */
 @media screen and (min-width: 641px) and (max-width: 768px) {
 
-
+.across {
+  width: 680px;
+}
   .app {
     width: 90%;
-    height: 70%;
+    height: 80%;
     background: #E0DBE6;
     overflow-y: scroll;
   }
 
+  h3 {
+    height: 25px;
+  }
+
   img 
   {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
   }
 
   .hs {
@@ -250,3 +256,39 @@ img {
     margin-bottom: calc(-.25 * var(--gutter));
   }
 }
+
+/* Screen Resize to 768. */
+@media screen and (min-width: 300px) and (max-width: 640px) {
+
+  .across {
+    width: 520px;
+  }
+    .app {
+      width: 95%;
+      height: 80%;
+      background: #E0DBE6;
+      overflow-y: scroll;
+    }
+  
+    h3 {
+      height: 15px;
+    }
+  
+    img 
+    {
+      width: 70%;
+      height: 70%;
+    }
+  
+    .hs {
+      display: grid;
+      grid-gap: calc(var(--gutter) / 2);
+      grid-template-columns: repeat(6, calc(80% - var(--gutter) * 2));
+      grid-template-rows: minmax(150px, 1fr);
+      
+      overflow-x: scroll;
+      scroll-snap-type: x proximity;
+      padding-bottom: calc(.75 * var(--gutter));
+      margin-bottom: calc(-.25 * var(--gutter));
+    }
+  }
