@@ -62,7 +62,7 @@ h2 {
 
 h3 {
   margin: 0;
-  width: 1035px;
+  width: 1000px;
   float: right;
 }
 
@@ -154,7 +154,7 @@ span {
 
 img {
     width: 100%;
-    height: 67%;
+    height: 80%;
     margin-top: 15px;
   }
 
@@ -228,6 +228,7 @@ img {
     width: 85%;
     height: 85%;
   }
+
     .app {
       width: 90%;
       height: 90%;
@@ -237,6 +238,7 @@ img {
   
     h3 {
       height: 25px;
+      width: 810px;
     }
   
     img 
@@ -257,7 +259,7 @@ img {
       margin-bottom: calc(-.25 * var(--gutter));
     }
   }
-/* Screen Resize to 768. */
+/* Screen Resize from 641px - 768. */
 @media screen and (min-width: 641px) and (max-width: 768px) {
 
 .across {
@@ -293,7 +295,7 @@ img {
   }
 }
 
-/* Screen Resize to 768. */
+/* Screen Resize 80px - 640px. */
 @media screen and (min-width: 100px) and (max-width: 640px) {
 
   .across {
