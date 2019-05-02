@@ -296,7 +296,7 @@ img {
 }
 
 /* Screen Resize 80px - 640px. */
-@media screen and (min-width: 100px) and (max-width: 640px) {
+@media screen and (min-width: 80px) and (max-width: 640px) {
 
   .across {
     width: 520px;
@@ -315,7 +315,7 @@ img {
     img 
     {
       width: 70%;
-      height: 50%;
+      height: 70%;
     }
   
     .hs {
