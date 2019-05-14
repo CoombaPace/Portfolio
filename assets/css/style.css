@@ -221,7 +221,7 @@ img {
   .hs li .meta h4 { font-weight: bold; margin-bottom: 11px; font-size: 20px; padding-top: 8px; color: #363636; }
   .hs li .meta span { display: block; margin-bottom: 5px; }
 
-/* Screen Resize from 768 - . */
+/* Screen Resize from 768 - .
 @media screen and (min-width: 769px) and (max-width: 1089px) {
 
   .across {
@@ -258,9 +258,9 @@ img {
       padding-bottom: calc(.75 * var(--gutter));
       margin-bottom: calc(-.25 * var(--gutter));
     }
-  }
+  } */
 /* Screen Resize from 641px - 768. */
-@media screen and (min-width: 641px) and (max-width: 768px) {
+/* @media screen and (min-width: 641px) and (max-width: 768px) {
 
 .across {
   width: 680px;
@@ -293,10 +293,10 @@ img {
     padding-bottom: calc(.75 * var(--gutter));
     margin-bottom: calc(-.25 * var(--gutter));
   }
-}
+} */
 
 /* Screen Resize 80px - 640px. */
-@media screen and (min-width: 80px) and (max-width: 640px) {
+/* @media screen and (min-width: 80px) and (max-width: 640px) {
 
   .across {
     width: 520px;
@@ -329,4 +329,4 @@ img {
       padding-bottom: calc(.75 * var(--gutter));
       margin-bottom: calc(-.25 * var(--gutter));
     }
-  }
+  } */
