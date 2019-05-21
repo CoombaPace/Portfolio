@@ -11,7 +11,7 @@
   align-content: start;
   width: 960px;
   height: 525px;
-  background: rgb(104, 78, 134);
+  background: #E0DBE6;
   overflow-y: scroll;
 }
 
@@ -27,7 +27,7 @@
 .hs {
   display: grid;
   grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-columns: repeat(7, calc(50% - var(--gutter) * 2));
   grid-template-rows: minmax(150px, 1fr);
   overflow-x: scroll;
   /* overflow: hidden; */
@@ -98,10 +98,10 @@ h3 {
 
 a:link {
   color: #000;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:visited {
-  color: #000
+  color: rgb(10, 46, 147)
 }
 a:hover { 
   color: indigo;
@@ -228,6 +228,7 @@ img {
   }
 
 
+
 /* Screen Resize from 768 - .
 @media screen and (min-width: 769px) and (max-width: 1089px) {
 
@@ -343,7 +344,7 @@ margin-top: 90px;
     .hs {
       display: grid;
       grid-gap: calc(var(--gutter) / 2);
-      grid-template-columns: repeat(6, calc(80% - var(--gutter) * -1.5));
+      grid-template-columns: repeat(7, calc(80% - var(--gutter) * -1.5));
       grid-template-rows: minmax(150px, 1fr);
       
       overflow-x: scroll;
