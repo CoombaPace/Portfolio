@@ -4,9 +4,17 @@ var app = angular.module('app', ['ngAnimate'])
 app.controller('mainCtrl', function($scope) {
 	$scope.boxes = [{
 		name: 'About Me',
-		image: 'images/zoo.jpg',
+		image: 'images/Alex_Grey-Jewel_Being.jpg',
 		heading: 'Mattia (muh\u2022tee\u2022yuh)',
-		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer but with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design.'
+		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer but with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design. Image is Alex Grey\'s Jewel of Being.',
+		gitLink: 'www.github.com/coombapace',
+		gitImg: 'images/github.jpg',
+		gitText: 'GitHub',
+		lInLink: 'linkedin.com/in/mattia-pace',
+		lInImg: 'images/linkedin.png',
+		lInText: 'LinkedIn',
+		alexLink: 'https://m.alexgrey.com/',
+		alexText: 'Alex Grey\'s Page'	
 	},{
 		name: 'Stockabily',
 		image: 'images/iStock.gif',
@@ -53,7 +61,7 @@ app.controller('mainCtrl', function($scope) {
 		content: 'A common pain point for businesses and organizations of all sizes is managing inventory. This app is meant to be a free to use inventory scanner that uses the user\'s phone camera (scanner gun\'s need not apply), and works with Quickbooks. Currently underdevelopment, check back soon and often.'
 	}, {
 		name: 'AntiWar.com News Scraper',
-		image: 'images/antiwar_logo.gif',
+		image: 'images/antiwar_logo.jpg',
 		heading: 'War is a Racket',
 		link: 'https://github.com/CoombaPace/awnewsProto',
 		linkText: 'Checkout the Repo',
