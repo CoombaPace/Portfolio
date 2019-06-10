@@ -1,90 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn:700" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">   
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">   
-
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Mattia's Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 
-
 <body>
-    <div class="across">
-        <span class="title"><h1>mattia.</h1></span>
-        <br>
-        <span class="subtitle"><h3>(muh &middot; tee &middot; yuh)</h3></span>
-    </div>
-    <div class="app">
-        <ul class="hs">
-          
-          <li class="item">Dragon Prince Battle Arena
-            <img src="./assets/images/battlearena.jpg">
-              <div class="meta">
-                <span><a href="https://coombapace.github.io/DragonPrinceBattleArena/" target="_blank" style="color: white;">Play it!</a></span>
-              </div>
-          </li>
 
-          <li class="item">Voltron Trivia
-            <img src="./assets/images/voltron_screen.png">
-              <div class="meta">
-                <span><a href="https://coombapace.github.io/TriviaGame/" target="_blank" style="color: white;">Supernerd Edition!</a></span>
-              </div>
-          </li>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+<!-- <pre id="typewriter">
+		<span class="var-highlight">var</span> mattiaPace = {
+				loves: <span class="string-highlight">'Life, Econ, Tech, Animals'</span>,
+				occupation: <span class="string-highlight">'Web Dev'</span>,
+				location: <span class="string-highlight">'The WWW via Atlanta'</span>,
+				skills:[<span class="string-highlight">'JS'</span>,
+					<span class="string-highlight">'React'</span>,
+					<span class="string-highlight">'Angular'</span>
+					<span class="string-highlight">'MySQL'</span>
+					<span class="string-highlight">'HTML/CSS'</span>];
+				}; </pre> -->
+<div class="container" ng-class="{'no-scroll': selected.length}" ng-app="app" ng-controller="mainCtrl">
+	<div class="page">
+		<div class="grid">
+			<div class="grid-item" ng-repeat="item in boxes">
+				<box class="box" item="item" on-select="selectBox" ng-class="{'selected': selected[0].item.name == item.name}"></box>
+			</div>
+		</div>
+	</div>
+	<div class="fullscreen-background top-up" ng-show="selected.length" ng-style="{'background-image': 'url(' + selected[0].item.image + ')'}"></div>
+	<div class="scroller" ng-show="selected.length">
+		<a class="close-button" ng-click="clearSelection()">
+			<i class="material-icons">close</i>
+		</a>
+		<h1>{{selected[0].item.name}}</h1>
+		<div big-box ng-repeat="item in selected" class="box on-top" position="item.position" selected="item.item">
+			<img ng-src="{{item.item.image}}" alt="" />
+			<div class="content">
+				<h2>{{item.item.heading}}</h2>
+				<p>{{item.item.content}}</p>
+				<p><a href="{{item.item.link}}">{{item.item.linkText}}</p></a>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus consequatur, sit saepe reprehenderit nisi dolorem, voluptates amet quos ab assumenda non id accusamus, dicta soluta laboriosam voluptas fuga sint deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis minus tenetur ex molestias qui possimus sit facilis dolorum suscipit. Cumque, aperiam inventore nobis? Veniam voluptatibus sapiente ea, voluptate dolores?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur dicta ducimus ratione reiciendis officia odit omnis distinctio, eveniet et modi fuga nisi voluptatem nihil aliquam ex pariatur possimus repudiandae vero?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, quos ducimus nobis. Necessitatibus provident impedit, neque quia dolores? Quas, architecto id. Iure distinctio, illum eaque at quia assumenda modi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero soluta quisquam autem quasi ut ex ab modi. Sit soluta dicta incidunt quaerat tenetur fugiat, natus perspiciatis illo. Totam, quo, minus.</p> -->
+			</div>
+		</div>
+		
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js'></script>
+<script src='js/zbvakw.js'></script>
 
-          <li class="item">Good-Bye Galaxy
-            <img src="./assets/images/gbg.png">
-              <div class="meta">
-                <span><a href="https://www.youtube.com/channel/UC7QgS5vWYB3yHiq5Mu7GElw" target="_blank" style="color: white;">Webseries</a></span>
-              </div>
-          </li>
-          
-          <li class="item">Bamazon Marketplace
-            <img src="./assets/images/bamazon.jpg">
-              <div class="meta">
-                <span><a href="https://github.com/CoombaPace/BAMazon" target="_blank" style="color: white;">Node & SQL Market</a></span>
-              </div>
-          </li>
+  
 
-          <li class="item">Liri Bot
-            <img src="./assets/images/liri.jpg">
-              <div class="meta">
-                <span><a href="https://github.com/CoombaPace/liri-node-app" target="_blank" style="color: white;">Siri-esque!</a></span>
-              </div>
-          </li>
+    <script  src="./script.js"></script>
 
-          <li class="item">Beer Guessing Game
-            <img src="./assets/images/guessing.jpg">
-              <div class="meta">
-                <span><a href="https://coombapace.github.io/WordGuessGame/" target="_blank" style="color: white;">Beer Nerds Only</a></span>
-              </div>
-          </li>
 
-          <li class="item">Giphy Machine
-            <img src="./assets/images/giphymachine.jpg">
-              <div class="meta">
-                <span><a href="https://coombapace.github.io/giphymachine/" target="_blank" style="color: white;">Create Gif Buttons</a></span>
-              </div>
-          </li>
-          
-        </ul>
-        
-        <div class="container">
-          <div class="bottom">
-            <span class="foot">
-            atlanta, ga
-            </span>
-            <span class="sub">
-            <a href="mailto:muhteeyuh@gmail.com">muhteeyuh@gmail.com</a>
-            </span>
-          </div>
-        </div>
-      </div>
+
+
 </body>
+
 </html>
