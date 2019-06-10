@@ -4,9 +4,9 @@ var app = angular.module('app', ['ngAnimate'])
 app.controller('mainCtrl', function($scope) {
 	$scope.boxes = [{
 		name: 'About Me',
-		image: 'https://source.unsplash.com/uAgLGG1WBd4/900x900',
+		image: 'images/zoo.jpg',
 		heading: 'Mattia (muh\u2022tee\u2022yuh)',
-		content: 'Born in Central Italy, raised in the Southern US. A delightful mix of both, an Arnold Palmer but with Sweet Tea and Limonata.'
+		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer but with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design.'
 	},{
 		name: 'Stockabily',
 		image: 'images/iStock.gif',
@@ -51,6 +51,13 @@ app.controller('mainCtrl', function($scope) {
 		link: 'https://github.com/CoombaPace/qb-inv-scanner',
 		linkText: '',
 		content: 'A common pain point for businesses and organizations of all sizes is managing inventory. This app is meant to be a free to use inventory scanner that uses the user\'s phone camera (scanner gun\'s need not apply), and works with Quickbooks. Currently underdevelopment, check back soon and often.'
+	}, {
+		name: 'AntiWar.com News Scraper',
+		image: 'images/antiwar_logo.gif',
+		heading: 'War is a Racket',
+		link: 'https://github.com/CoombaPace/awnewsProto',
+		linkText: 'Checkout the Repo',
+		content: 'All the news that\'s fit to scrape, for real. My small contribution to society, helping to keep an informed & vigilant public, and an organized journalistic community.'
 	}, ];
 
 	$scope.selected = [];
