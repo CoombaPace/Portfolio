@@ -14,7 +14,7 @@
 
 <div class="container" ng-class="{'no-scroll': selected.length}" ng-app="app" ng-controller="mainCtrl">
 	<div class="page">
-		<div class="header">
+		<!-- <div class="header">
 			<div class="row">
 					<img src="images/github.jpg">
 			</div>
@@ -23,13 +23,13 @@
 			</div>
 			<div class="row">
 					<img src="images/gmail.png">
-			</div>
+			</div> -->
 			<!-- <pre id="typewriter">
 		<span class="var-highlight">Mattia Pace</span>
 		Full Stack Dev <span class="string-highlight">			
 		WWW via ATL</span>
 			</pre> -->
-		</div>
+		<!-- </div> -->
 		<div class="grid">
 			<div class="grid-item" ng-repeat="item in boxes">
 				<box class="box" item="item" on-select="selectBox" ng-class="{'selected': selected[0].item.name == item.name}"></box>
