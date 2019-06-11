@@ -11,19 +11,25 @@
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-<!-- <pre id="typewriter">
-		<span class="var-highlight">var</span> mattiaPace = {
-				loves: <span class="string-highlight">'Life, Econ, Tech, Animals'</span>,
-				occupation: <span class="string-highlight">'Web Dev'</span>,
-				location: <span class="string-highlight">'The WWW via Atlanta'</span>,
-				skills:[<span class="string-highlight">'JS'</span>,
-					<span class="string-highlight">'React'</span>,
-					<span class="string-highlight">'Angular'</span>
-					<span class="string-highlight">'MySQL'</span>
-					<span class="string-highlight">'HTML/CSS'</span>];
-				}; </pre> -->
+
 <div class="container" ng-class="{'no-scroll': selected.length}" ng-app="app" ng-controller="mainCtrl">
 	<div class="page">
+		<div class="header">
+			<div class="row">
+					<img src="images/github.jpg">
+			</div>
+			<div class="row">
+					<img src="images/linkedin.png">
+			</div>
+			<div class="row">
+					<img src="images/gmail.png">
+			</div>
+			<!-- <pre id="typewriter">
+		<span class="var-highlight">Mattia Pace</span>
+		Full Stack Dev <span class="string-highlight">			
+		WWW via ATL</span>
+			</pre> -->
+		</div>
 		<div class="grid">
 			<div class="grid-item" ng-repeat="item in boxes">
 				<box class="box" item="item" on-select="selectBox" ng-class="{'selected': selected[0].item.name == item.name}"></box>
@@ -43,7 +49,7 @@
         <p>{{item.item.content}}</p>
         <p><a href="{{item.item.link}}">{{item.item.linkText}}</p></a>
         <p><a href="{{item.item.gitLink}}">{{item.item.gitText}}</p></a>
-        <p><a href="{{item.item.lInLink}}">{{item.item.lInText}}</p></a>
+        <p><a href="{{item.item.lInLink}}">{{item.item.lInTexts}}</p></a>
         <p><a href="{{item.item.alexLink}}">{{item.item.alexText}}</p></a>
 
 			</div>
@@ -52,12 +58,8 @@
 	</div>
 </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js'></script>
-<script src='js/zbvakw.js'></script>
-
-  
-
-    <script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js'></script>
+  <script  src="./script.js"></script>
 
 
 

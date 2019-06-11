@@ -60,6 +60,10 @@ html {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.header {
+  float:right;
+}
 .container {
   display: flex;
   flex-direction: row;
@@ -223,8 +227,8 @@ html {
   color: #ddd;
 }
 
-
-/* .var-highlight {
+/* Typewriter CSS */
+.var-highlight {
   color: blue;
 }
 
@@ -236,11 +240,10 @@ html {
   font-size: 2em;
   margin: 0;
   font-family: "Courier New";
-  height: 400px;
   color: purple;
 }
 #typewriter:after {
   content: "|";
   -webkit-animation: blink 500ms linear infinite alternate;
           animation: blink 500ms linear infinite alternate;
-} */
+}

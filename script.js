@@ -6,7 +6,7 @@ app.controller('mainCtrl', function($scope) {
 		name: 'About Me',
 		image: 'images/Alex_Grey-Jewel_Being.jpg',
 		heading: 'Mattia (muh\u2022tee\u2022yuh)',
-		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer but with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design. Image is Alex Grey\'s Jewel of Being.',
+		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer made with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design. Image is Alex Grey\'s Jewel of Being.',
 		gitLink: 'www.github.com/coombapace',
 		gitImg: 'images/github.jpg',
 		gitText: 'GitHub',
@@ -150,73 +150,75 @@ app.directive('bigBox', function($timeout) {
 	}
 })
 
-// function setupTypewriter(t) {
-// 	var HTML = t.innerHTML;
+/* TYPEWRITER LOGIC */
 
-// 	t.innerHTML = "";
+function setupTypewriter(t) {
+	var HTML = t.innerHTML;
 
-// 	var cursorPosition = 0,
-// 		tag = "",
-// 		writingTag = false,
-// 		tagOpen = false,
-// 		typeSpeed = 100,
-// 	tempTypeSpeed = 0;
+	t.innerHTML = "";
 
-// 	var type = function() {
+	var cursorPosition = 0,
+		tag = "",
+		writingTag = false,
+		tagOpen = false,
+		typeSpeed = 100,
+	tempTypeSpeed = 0;
+
+	var type = function() {
 	
-// 		if (writingTag === true) {
-// 			tag += HTML[cursorPosition];
-// 		}
+		if (writingTag === true) {
+			tag += HTML[cursorPosition];
+		}
 
-// 		if (HTML[cursorPosition] === "<") {
-// 			tempTypeSpeed = 0;
-// 			if (tagOpen) {
-// 				tagOpen = false;
-// 				writingTag = true;
-// 			} else {
-// 				tag = "";
-// 				tagOpen = true;
-// 				writingTag = true;
-// 				tag += HTML[cursorPosition];
-// 			}
-// 		}
-// 		if (!writingTag && tagOpen) {
-// 			tag.innerHTML += HTML[cursorPosition];
-// 		}
-// 		if (!writingTag && !tagOpen) {
-// 			if (HTML[cursorPosition] === " ") {
-// 				tempTypeSpeed = 0;
-// 			}
-// 			else {
-// 				tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-// 			}
-// 			t.innerHTML += HTML[cursorPosition];
-// 		}
-// 		if (writingTag === true && HTML[cursorPosition] === ">") {
-// 			tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-// 			writingTag = false;
-// 			if (tagOpen) {
-// 				var newSpan = document.createElement("span");
-// 				t.appendChild(newSpan);
-// 				newSpan.innerHTML = tag;
-// 				tag = newSpan.firstChild;
-// 			}
-// 		}
+		if (HTML[cursorPosition] === "<") {
+			tempTypeSpeed = 0;
+			if (tagOpen) {
+				tagOpen = false;
+				writingTag = true;
+			} else {
+				tag = "";
+				tagOpen = true;
+				writingTag = true;
+				tag += HTML[cursorPosition];
+			}
+		}
+		if (!writingTag && tagOpen) {
+			tag.innerHTML += HTML[cursorPosition];
+		}
+		if (!writingTag && !tagOpen) {
+			if (HTML[cursorPosition] === " ") {
+				tempTypeSpeed = 0;
+			}
+			else {
+				tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+			}
+			t.innerHTML += HTML[cursorPosition];
+		}
+		if (writingTag === true && HTML[cursorPosition] === ">") {
+			tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+			writingTag = false;
+			if (tagOpen) {
+				var newSpan = document.createElement("span");
+				t.appendChild(newSpan);
+				newSpan.innerHTML = tag;
+				tag = newSpan.firstChild;
+			}
+		}
 
-// 		cursorPosition += 1;
-// 		if (cursorPosition < HTML.length - 1) {
-// 			setTimeout(type, tempTypeSpeed);
-// 		}
+		cursorPosition += 1;
+		if (cursorPosition < HTML.length - 1) {
+			setTimeout(type, tempTypeSpeed);
+		}
 
-// 	};
+	};
 
-// 	return {
-// 		type: type
-// 	};
-// }
+	return {
+		type: type
+	};
+}
 
-// var typer = document.getElementById('typewriter');
+var typer = document.getElementById('typewriter');
 
-// typewriter = setupTypewriter(typewriter);
+typewriter = setupTypewriter(typewriter);
 
-// typewriter.type();
+typewriter.type();
