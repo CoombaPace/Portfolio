@@ -63,7 +63,7 @@ app.controller('mainCtrl', function($scope) {
 		name: 'AntiWar.com News Scraper',
 		image: 'images/antiwar_logo.jpg',
 		heading: 'War is a Racket',
-		link: 'https://github.com/CoombaPace/awnewsProto',
+		link: 'https://github.com/CoombaPace/awnews',
 		linkText: 'Checkout the Repo',
 		content: 'All the news that\'s fit to scrape, for real. My small contribution to society, helping to keep an informed & vigilant public, and an organized journalistic community.'
 	}, ];
