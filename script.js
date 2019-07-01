@@ -1,23 +1,40 @@
-
 var app = angular.module('app', ['ngAnimate'])
 
 app.controller('mainCtrl', function($scope) {
-	$scope.boxes = [{
-		name: 'About Me',
-		image: 'images/Alex_Grey-Jewel_Being.jpg',
-		heading: 'Mattia (muh\u2022tee\u2022yuh)',
-		content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer made with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design. Image is Alex Grey\'s Jewel of Being.',
-		gitLink: 'www.github.com/coombapace',
-		gitImg: 'images/github.jpg',
-		gitText: 'GitHub',
-		lInLink: 'linkedin.com/in/mattia-pace',
-		lInImg: 'images/linkedin.png',
-		lInText: 'LinkedIn',
-		alexLink: 'https://m.alexgrey.com/',
-		alexText: 'Alex Grey\'s Page'	
-	},{
+	$scope.boxes = [
+		{
+			name: 'AntiWar.com News Scraper',
+			image: 'images/antiwar_logo.jpg',
+			heading: 'War is a Racket',
+			link: 'https://github.com/CoombaPace/awnews',
+			linkText: 'Checkout the Repo',
+			content: 'All the news that\'s fit to scrape, for real. My small contribution to society, helping to keep an informed & vigilant public, and an organized journalistic community.'
+		},
+		{
+			name: 'Mass Effect Memory Clicky Game',
+			image: 'images/memory_clicker.png',
+			heading: 'React + Material UI + Mass Effect',
+			link: 'https://coombapace.github.io/react-memory-game/',
+			linkText: 'Play it!',
+			content: 'This is a very simple memory game, where the object is to click each character only once. It is built with ReactJS and Matieral UI Components. The highlight of this project was creating a custom backstretch component. I caught myself using a jQuery solution, the popular BackstretchJS, and judged that as a suboptimal solution considering how React interacts with the DOM vs. jQuery.'
+		},
+		//{
+	// 	name: 'About Me',
+	// 	image: 'images/Alex_Grey-Jewel_Being.jpg',
+	// 	heading: 'Mattia (muh\u2022tee\u2022yuh)',
+	// 	content: 'Born in Central Italy, raised in the Southern US. Arnold Palmer made with Limonatta. 1:1 Econ Nerd & Technologist. Working to solve problems big & small by marrying the two the style & intutive design. Image is Alex Grey\'s Jewel of Being.',
+	// 	gitLink: 'www.github.com/coombapace',
+	// 	gitImg: 'images/github.jpg',
+	// 	gitText: 'GitHub',
+	// 	lInLink: 'linkedin.com/in/mattia-pace',
+	// 	lInImg: 'images/linkedin.png',
+	// 	lInText: 'LinkedIn',
+	// 	alexLink: 'https://m.alexgrey.com/',
+	// 	alexText: 'Alex Grey\'s Page'	
+	// },
+	{
 		name: 'Stockabily',
-		image: 'images/iStock.gif',
+		image: 'images/iStock.png',
 		heading: 'This is Stockabily',
 		link: 'https://istock-tropic.herokuapp.com/',
 		linkText: 'Try it!',
@@ -59,14 +76,16 @@ app.controller('mainCtrl', function($scope) {
 		link: 'https://github.com/CoombaPace/qb-inv-scanner',
 		linkText: '',
 		content: 'A common pain point for businesses and organizations of all sizes is managing inventory. This app is meant to be a free to use inventory scanner that uses the user\'s phone camera (scanner gun\'s need not apply), and works with Quickbooks. Currently underdevelopment, check back soon and often.'
-	}, {
-		name: 'AntiWar.com News Scraper',
-		image: 'images/antiwar_logo.jpg',
-		heading: 'War is a Racket',
-		link: 'https://github.com/CoombaPace/awnews',
-		linkText: 'Checkout the Repo',
-		content: 'All the news that\'s fit to scrape, for real. My small contribution to society, helping to keep an informed & vigilant public, and an organized journalistic community.'
-	}, ];
+	}, 
+	// {
+	// 	name: 'AntiWar.com News Scraper',
+	// 	image: 'images/antiwar_logo.jpg',
+	// 	heading: 'War is a Racket',
+	// 	link: 'https://github.com/CoombaPace/awnews',
+	// 	linkText: 'Checkout the Repo',
+	// 	content: 'All the news that\'s fit to scrape, for real. My small contribution to society, helping to keep an informed & vigilant public, and an organized journalistic community.'
+	// }
+	, ];
 
 	$scope.selected = [];
 	$scope.selectBox = function(item, position, heading) {
