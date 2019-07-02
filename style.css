@@ -167,7 +167,9 @@ html {
   overflow-y: auto;
 }
 .scroller h1 {
-  color: white;
+  font-family: 'Oswald', sans-serif;
+  color: blue;
+  font-size: -webkit-xxx-large;
   width: 100%;
   margin-bottom: 30px;
   position: absolute;
