@@ -229,23 +229,6 @@ html {
   color: #ddd;
 }
 
-/* Typewriter CSS */
-.var-highlight {
-  color: blue;
-}
-
-.string-highlight {
-  color: lightskyblue;
-}
-
-#typewriter {
-  font-size: 2em;
-  margin: 0;
-  font-family: "Courier New";
-  color: purple;
-}
-#typewriter:after {
-  content: "|";
-  -webkit-animation: blink 500ms linear infinite alternate;
-          animation: blink 500ms linear infinite alternate;
+.big-box {
+  
 }
